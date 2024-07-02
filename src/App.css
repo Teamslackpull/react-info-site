@@ -1,11 +1,92 @@
-.App {
+
+body {
+ color: whitesmoke;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+.Card {
+  box-shadow: 1px 1px 5px whitesmoke;
+  width: 90%;
+  background-color: #282D35;
+  margin: 10% auto;
+  border: 5px solid  antiquewhite;
+  border-radius: 10px;
+}
+@media (min-width: 780px) {
+  background-position: center left 250%  ;
+  background-size: 50%;
+  .Card {
+    width: 50%;
+  }
+}
+@media (min-width:1300px ) {
+.Card {
+  width: 50%;
+}
+}
+.Content {
+  background-position:  center left 200%  ;
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-color:#282D35 ;
+  padding: 4em 3.5em;
+
+}
+
+
+/*Header Items*/
+header {
+   padding: 1em;
+   background-color: #21222A;
+}
+
+.LogoContainer {
+  display: flex;
+  align-items: center;
+}
+.LogoContainer h2 {
+  font-size: 2rem;
+  margin-left: -0.2em;
+  font-weight: bold;
+  color: #00D8FF;
+}
+
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+nav ul {
+  font-size: 1.3rem;
+  font-weight: bold;
+  list-style: none;
+  text-align: right;
+  width: 70%;
+}
+/*Mid section*/
+
+.ReactList {
+  margin-top: 1.5em;
+  display: flex;
+  flex-direction: column;
+  gap: 1.3em;
+  list-style: none;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.Title {
+  font-size: 3rem;
+}
+/*Bottom Items */
+footer {
+  padding: 1em;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -13,19 +94,30 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.ReactList li {
+  position: relative;
+  padding-left: 20px;
 }
+.ReactList li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #00D8FF;
+  animation: sonar-blink 1.5s infinite;
 
-.App-link {
-  color: #61dafb;
+}
+@keyframes sonar-blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
 }
 
 @keyframes App-logo-spin {
